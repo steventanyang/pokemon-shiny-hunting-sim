@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Shiny Hunting Simulator</title>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Tektur:wght@600&display=swap');
+
+    body {
+      font-family: 'Tektur', sans-serif;
+      background-image: url('static/main/background.jpg');
+      background-size: 125%; /* Adjust as needed */
+      background-position: center center; /* Adjust as needed */
+      background-repeat: no-repeat; /* Adjust as needed */
+      margin: 0;
+    }
+
+    .heading {
+      text-align: center;
+      color: #FFCC01;
+      text-shadow: 5px 0 #2D6AB3, -5px 0 #2D6AB3, 0 5px #2D6AB3, 0 -5px #2D6AB3, 5px 5px #2D6AB3, -5px -5px #2D6AB3, -5px 5px #2D6AB3, 5px -5px #2D6AB3;
+      font-size: 100px;
+      margin: 0;
+      padding-top: 150px;
+      padding-bottom: 60px;
+      width: 100%;
+      display: inline-block;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .main-buttons {
+      background-color: #2D6AB3;
+      color: #fff;
+      font-family: 'Tektur', sans-serif;
+      font-size: 24px;
+      padding: 12px 24px;
+      width: 25%;
+      height: 70px;
+      border: 5px solid #17285E;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-buttons:hover {
+      background-color: #17285E;
+    }
+    
+    .button-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    }
+
+  </style>
+  <link rel="stylesheet" href="static/stylesheet.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="heading">
+      POKEMON SHINY HUNTING SIMULATOR
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="main-buttons">
+      <a href="/regions" style="color:#fff">
+        <span class="button-text">LOGIN</span>
+      </a>
+    </button>
+  </div>
+
+  <div class="button-container">
+    <button class="main-buttons">
+      <span class="button-text">REGISTER</span>
+    </button>
+  </div>
+
+  <div class="button-container">
+    <button class="main-buttons">
+      <span class="button-text">REGISTER</span>
+    </button>
+  </div>
+<!-- {% load static %}
+  <div>
+    <img src="{% static 'main/pokedex.png' %}" alt="Image" />
+  </div> -->
+</body>
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="static/stylesheet.css"> -->
+  <title>Pokemon Shiny Hunting Simulator</title>
+  {% load static %}
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Tektur:wght@600&display=swap');
+      
+    body {
+      font-family: 'Tektur', sans-serif;
+    }
+    .heading {
+      text-align: center;
+      color: #FFCC01;
+      text-shadow: 5px 0 #2D6AB3, -5px 0 #2D6AB3, 0 5px #2D6AB3, 0 -5px #2D6AB3, 5px 5px #2D6AB3, -5px -5px #2D6AB3, -5px 5px #2D6AB3, 5px -5px #2D6AB3;
+      font-size: 80px;
+      margin: 0;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      width: 100%;
+      display: inline-block;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .last-button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+
+    .main-buttons {
+      background-color: #2D6AB3;
+      color: #fff;
+      font-family: 'Tektur', sans-serif;
+      font-size: 24px;
+      padding: 12px 24px;
+      margin-right: 5%;
+      margin-left: 5%;
+      width: 25%;
+      height: 180px;
+      border: 5px solid #17285E;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-buttons-text {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+    }
+
+    .main-buttons:hover {
+      background-color: #17285E;
+    }
+
+    .back-button {
+      display: inline-block;
+      position: relative;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 30px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="back-button">
+    <a href="/" style="color:#17285E">
+      BACK
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="heading">
+      CHOOSE A REGION
+    </div>
+  </div>
+
+
+  <div class="button-container">
+    <button class="main-buttons">
+      <a href="/kanto" style="color:#fff">
+        <span class="main-buttons-text">KANTO</span>
+      </a>
+    </button>
+
+    <button class="main-buttons">
+      <a href="/johto" style="color:#fff">
+        <span class="main-buttons-text">JOHTO</span>
+      </a>
+    </button>
+
+    <button class="main-buttons">
+      <a href="/hoenn" style="color:#fff">
+        <span class="main-buttons-text">HOENN</span>
+      </a>
+    </button>
+  </div>
+
+
+  <div class="button-container">
+    <button class="main-buttons">
+      <a href="/sinnoh" style="color:#fff">
+        <span class="main-buttons-text">SINNOH</span>
+      </a>
+    </button>
+
+    <button class="main-buttons">
+      <a href="/unova" style="color:#fff">
+        <span class="main-buttons-text">UNOVA</span>
+      </a>
+    </button>
+
+    <button class="main-buttons">
+      <a href="/kalos" style="color:#fff">
+        <span class="main-buttons-text">KALOS</span>
+      </a>
+    </button>
+  </div>
+
+
+  <div class="button-container">
+    <button class="main-buttons">
+      <a href="/alola" style="color:#fff">
+        <span class="main-buttons-text">ALOLA</span>
+      </a>
+    </button>
+
+    <button class="main-buttons">
+      <a href="/galar" style="color:#fff">
+        <span class="main-buttons-text">GALAR</span>
+      </a>
+    </button>
+
+    <button class="main-buttons">
+      <a href="/paldea" style="color:#fff">
+        <span class="main-buttons-text">PALDEA</span>
+      </a>
+    </button>
+
+
+  </div>
+</body>
+
+
+<script>
+  const pokedexButton = document.querySelector('.pokedex-toggle-button');
+  const pokedexDropdown = document.querySelector('.pokedex-dropdown');
+
+  pokedexButton.addEventListener('click', () => {
+    if (pokedexDropdown.style.display === 'none' || pokedexDropdown.style.display === '') {
+      pokedexDropdown.style.display = 'block';
+    } else {
+      pokedexDropdown.style.display = 'none';
+    }
+  });
+</script>
+
+
+

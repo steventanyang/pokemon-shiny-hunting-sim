@@ -1,0 +1,24 @@
+bug;
+dark;
+dragon;
+electric;
+fairy;
+fighting;
+fire;
+flying;
+ghost;
+grass;
+ground;
+ice;
+normal;
+poison;
+psychic;
+rock;
+steel;
+water;
+
+
+  <!-- {% for pokemon in r.pokemon_set.all %}
+    {% if pokemon.caught %}
+      {% with caught_count=caught_count|add:1 %}
+      {% endwith %} -->

@@ -1,0 +1,36 @@
+{% extends 'main/dex_base.html' %}
+
+{% block body %}
+
+  <h1 class="pokedex-title">{{ r.name }}</h1>
+  <div class="dex-container">
+    <ul class="pokemon-list">
+      {% for pokemon in r.pokemon_set.all %}
+        {% if pokemon.shiny_caught %}
+            {% if pokemon.pokemon_type == 'bug' %}
+                <li class="pokemon-item" style='background-color: #73852d; border-width: 5px; border-color: goldenrod;'>
+            {% elif pokemon.pokemon_type == 'grass' %}
+                <li class="pokemon-item" style='background-color: darkgreen; border-width: 5px; border-color: goldenrod;'>
+            {% endif %}
+                <p class="pokemon-info" style="color:azure">ID: {{ pokemon.pokemon_id }}</p>
+                <h2 class="pokemon-name" style="color:azure">{{ pokemon.name }}</h2>
+                <p class="pokemon-info" style="color:azure">{{ pokemon.pokemon_type }}</p>
+        {% elif pokemon.caught %}
+          <li class="pokemon-item" style='background-color: white; border-width: 2px; border-color: grey'>
+            <p class="pokemon-info" style="color:darkred">ID: {{ pokemon.pokemon_id }}</p>
+            <h2 class="pokemon-name" style="color:darkred">{{ pokemon.name }}</h2>
+            <p class="pokemon-info" style="color:darkred">{{ pokemon.pokemon_type }}</p>
+        {% else %}
+          <li class="pokemon-item" style='background-color: grey'>
+            <p class="pokemon-info">ID: {{ pokemon.pokemon_id }}</p>
+            <h2 class="pokemon-name">{{ pokemon.name }}</h2>
+            <p class="pokemon-info">{{ pokemon.pokemon_type }}</p>
+        {% endif %}
+          <!-- <p class="pokemon-info">Caught: {% if pokemon.caught %}Yes{% else %}No{% endif %}</p>
+          <p class="pokemon-info">Shiny Caught: {% if pokemon.shiny_caught %}Yes{% else %}No{% endif %}</p> -->
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endblock %}
