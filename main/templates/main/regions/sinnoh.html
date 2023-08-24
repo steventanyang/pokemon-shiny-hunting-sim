@@ -1,2 +1,17 @@
 {% extends 'main/reg_base.html' %}
 {% block region %}SINNOH{% endblock %}
+
+
+{% block body %}
+
+<form method="post" action="{% url 'sinnoh' r.name %}">
+    {% csrf_token %}
+    <button type="submit">Catch</button>
+</form>
+
+{% if result %}
+    <p>You caught: {{ result }}</p>
+{% endif %}
+
+
+{% endblock %}
