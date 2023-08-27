@@ -7,20 +7,20 @@
     <form method="post" action="{% url 'kalos' r.name %}">
         {% csrf_token %}
         <div class="catch-container">
-            <button type="submit">CATCH</button>
+            <button class="catch_button" type="submit">CATCH</button>
         </div>
     </form>
 </div>
 
 {% if result|slice:":5" == "shiny" %}
 <div class="caught-container">
-    <p>{{ result|upper }}</p>
+    <p class="caught_pokemon">{{ result|upper }}</p>
 </div>
 
 {% elif result %}
 
 <div class="caught-container">
-    <p>{{ result }}</p>
+    <p class="caught_pokemon">{{ result }}</p>
 </div>
 
 {% endif %}
