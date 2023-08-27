@@ -8,12 +8,12 @@
   <title>Pokemon Shiny Hunting Simulator</title>
   {% load static %}
   <style>
-
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Tektur:wght@600&display=swap');
       
     body {
       font-family: 'Tektur', sans-serif;
     }
+
     .heading {
       text-align: center;
       color: #FFCC01;
@@ -44,6 +44,40 @@
     .pokedex-button:hover {
       transform: scale(1.2);
       filter: brightness(0.8);
+    }
+
+    .catch-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 200px;
+    }
+
+    button {
+      background-color: #2D6AB3;
+      color: #fff;
+      font-family: 'Tektur', sans-serif;
+      font-size: 24px;
+      padding: 12px 24px;
+      width: 25%;
+      height: 70px;
+      border: 5px solid #17285E;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #17285E;
+    }
+
+    .caught-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 25px;
     }
 
   </style>

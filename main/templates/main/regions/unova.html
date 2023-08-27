@@ -3,14 +3,26 @@
 
 
 {% block body %}
+<div>
+    <form method="post" action="{% url 'unova' r.name %}">
+        {% csrf_token %}
+        <div class="catch-container">
+            <button type="submit">CATCH</button>
+        </div>
+    </form>
+</div>
 
-<form method="post" action="{% url 'unova' r.name %}">
-    {% csrf_token %}
-    <button type="submit">Catch</button>
-</form>
+{% if result|slice:":5" == "shiny" %}
+<div class="caught-container">
+    <p>{{ result|upper }}</p>
+</div>
 
-{% if result %}
-    <p>You caught: {{ result }}</p>
+{% elif result %}
+
+<div class="caught-container">
+    <p>{{ result }}</p>
+</div>
+
 {% endif %}
 
 

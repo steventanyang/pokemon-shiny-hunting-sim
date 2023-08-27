@@ -40,14 +40,14 @@ def catch_pokemon(region):
 
 
 
-def kanto(response, region):
+def kanto(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/kanto.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("kanto")  # Call the encounter logic
+        return render(request, "main/regions/kanto.html", {"r": r, "result": result})
     
-    return render(response, "main/regions/kanto.html", {"r": r})
+    return render(request, "main/regions/kanto.html", {"r": r})
 
 def johto(response, region):
     r = Region.objects.get(name=region)
