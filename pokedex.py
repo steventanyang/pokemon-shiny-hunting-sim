@@ -6,6 +6,7 @@ django.setup()
 
 
 from main.models import Pokedex, Region, Pokemon
+import requests
 
 
 national_pokedex = Pokedex.objects.get(name="National")
@@ -49,3 +50,23 @@ def add_pokemon_to_database(region):
 #add_pokemon_to_database("alola")
 #add_pokemon_to_database("galar")
 #add_pokemon_to_database("paldea")
+
+def add_images_to_database():
+    for id_number in range(1,1011):
+        url = f"https://pokeapi.co/api/v2/pokemon/{id_number}/"
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            pokemon_image = data['sprites']['front_default']
+
+            try:
+                pokemon = Pokemon.objects.get(pokemon_id=id_number)
+                pokemon.image = pokemon_image
+                pokemon.save()
+
+            except Pokemon.DoesNotExist:
+                print('oops')
+        else :
+            print("oops")
+
+add_images_to_database()

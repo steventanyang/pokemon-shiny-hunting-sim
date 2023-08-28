@@ -18,5 +18,6 @@ class Pokemon(models.Model):
     pokemon_type = models.CharField(max_length=100)
     caught = models.BooleanField()
     shiny_caught = models.BooleanField()
+    image = models.URLField(max_length=200, default='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png')
     def __str__(self):
         return self.name

@@ -3,6 +3,8 @@
 {% block body %}
 
   <h1 class="pokedex-title">{{ r.name }}</h1>
+
+
   <div class="dex-container">
     <ul class="pokemon-list">
       {% for pokemon in r.pokemon_set.all %}
@@ -33,4 +35,7 @@
     </ul>
   </div>
 
+
+
+  
 {% endblock %}
