@@ -69,4 +69,4 @@ def add_images_to_database():
         else :
             print("oops")
 
-add_images_to_database()
+#add_images_to_database()

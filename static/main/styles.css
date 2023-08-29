@@ -168,7 +168,6 @@ text-align: center;
 
 /* pokedex */
 
-
 .pokedex_navbar {
   background-color: #17285E;
   overflow: hidden;
@@ -189,22 +188,43 @@ text-align: center;
   color: white;
 }
 
+.red_top {
+  background-color: darkred;
+  width: 7%;
+  height: 7%;
+}
+
+.red {
+  background-color: darkred;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
 .pokedex-title {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5%;
+  margin-left: 5%;
+  background-color: white;
   text-transform: uppercase;
   color: #FFCC01;
   text-shadow: 5px 0 #2D6AB3, -5px 0 #2D6AB3, 0 5px #2D6AB3, 0 -5px #2D6AB3, 5px 5px #2D6AB3, -5px -5px #2D6AB3, -5px 5px #2D6AB3, 5px -5px #2D6AB3;
   font-size: 80px;
   font-family: 'Tektur', sans-serif;
-  margin: 0;
-  padding-top: 60px;
-  width: 100%;
-  display: inline-block;
+  padding-top: 1%;
 }
 
 .dex-container {
   display: flex;
   justify-content: center;
+  background-color: #fff;
+  margin-right: 5%;
+  margin-left: 5%;
+  overflow-y: scroll;
+  max-height: 75%;
 }
 
 .pokemon-list {

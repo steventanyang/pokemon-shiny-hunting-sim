@@ -2,9 +2,8 @@
 
 {% block body %}
 
-  <h1 class="pokedex-title">{{ r.name }}</h1>
-
-
+<div class="red_top"></div>
+<div class="pokedex-title">{{ r.name }}</div>
   <div class="dex-container">
     <ul class="pokemon-list">
       {% for pokemon in r.pokemon_set.all %}
@@ -17,16 +16,19 @@
                 <p class="pokemon-info" style="color:azure">ID: {{ pokemon.pokemon_id }}</p>
                 <h2 class="pokemon-name" style="color:azure">{{ pokemon.name }}</h2>
                 <p class="pokemon-info" style="color:azure">{{ pokemon.pokemon_type }}</p>
+                <!-- <img src="{{ pokemon.image }}" alt="{{ pokemon.name }} Image"> -->
         {% elif pokemon.caught %}
           <li class="pokemon-item" style='background-color: white; border-width: 2px; border-color: grey'>
             <p class="pokemon-info" style="color:darkred">ID: {{ pokemon.pokemon_id }}</p>
             <h2 class="pokemon-name" style="color:darkred">{{ pokemon.name }}</h2>
             <p class="pokemon-info" style="color:darkred">{{ pokemon.pokemon_type }}</p>
+            <!-- <img src="{{ pokemon.image }}" alt="{{ pokemon.name }} Image"> -->
         {% else %}
           <li class="pokemon-item" style='background-color: grey'>
             <p class="pokemon-info">ID: {{ pokemon.pokemon_id }}</p>
             <h2 class="pokemon-name">{{ pokemon.name }}</h2>
             <p class="pokemon-info">{{ pokemon.pokemon_type }}</p>
+            <!-- <img src="{{ pokemon.image }}" alt="{{ pokemon.name }} Image"> -->
         {% endif %}
           <!-- <p class="pokemon-info">Caught: {% if pokemon.caught %}Yes{% else %}No{% endif %}</p>
           <p class="pokemon-info">Shiny Caught: {% if pokemon.shiny_caught %}Yes{% else %}No{% endif %}</p> -->
@@ -35,7 +37,4 @@
     </ul>
   </div>
 
-
-
-  
 {% endblock %}
