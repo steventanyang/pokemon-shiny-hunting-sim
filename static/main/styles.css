@@ -135,7 +135,7 @@ text-align: center;
 .catch-container {
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .catch_button {
@@ -164,6 +164,29 @@ text-align: center;
 
 .caught_pokemon {
   font-size: 25px;
+}
+
+.caught_pokemon_image {
+  display: flex;
+  justify-content: center;
+}
+
+.shiny_pokemon {
+  filter: hue-rotate(100deg);
+  height: 300px;
+  width: 300px;
+}
+
+.normal_pokemon {
+  height: 300px;
+  width: 300px;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: red;
 }
 
 /* pokedex */

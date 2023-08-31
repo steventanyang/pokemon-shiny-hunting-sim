@@ -13,17 +13,25 @@
 </div>
 
 {% if result|slice:":5" == "shiny" %}
+
+<div class="caught_pokemon_image">
+    <img class="shiny_pokemon" src="{{ p.image }}">
+</div>
 <div class="caught-container">
     <p class="caught_pokemon">{{ result|upper }}</p>
 </div>
 
 {% elif result %}
 
+<div class="caught_pokemon_image">
+    <img class="normal_pokemon" src="{{ p.image }}">
+</div>
 <div class="caught-container">
-    <p class="caught_pokemon">{{ result }}</p>
+    <p class="caught_pokemon">{{ result|capfirst }}</p>
 </div>
 
-{% endif %}
+<!-- <p class="new">* NEW *</p> -->
 
+{% endif %}
 
 {% endblock %}

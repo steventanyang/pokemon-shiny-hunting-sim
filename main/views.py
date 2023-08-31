@@ -44,79 +44,115 @@ def kanto(request, region):
     r = Region.objects.get(name=region)
     
     if request.method == 'POST':
-        result = catch_pokemon("kanto")  # Call the encounter logic
-        return render(request, "main/regions/kanto.html", {"r": r, "result": result})
+        result = catch_pokemon("kanto")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/kanto.html", {"r": r, "result": result, "p": p})
     
     return render(request, "main/regions/kanto.html", {"r": r})
 
-def johto(response, region):
+def johto(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/johto.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("johto")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/johto.html", {"r": r, "result": result, "p": p})
     
-    return render(response, "main/regions/johto.html", {"r": r})
+    return render(request, "main/regions/johto.html", {"r": r})
 
-def hoenn(response, region):
+def hoenn(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/hoenn.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("hoenn")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/hoenn.html", {"r": r, "result": result, "p": p})
     
-    return render(response, "main/regions/hoenn.html", {"r": r})
+    return render(request, "main/regions/hoenn.html", {"r": r})
 
-def sinnoh(response, region):
+def sinnoh(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/sinnoh.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("sinnoh")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/sinnoh.html", {"r": r, "result": result, "p": p})
     
-    return render(response, "main/regions/sinnoh.html", {"r": r})
+    return render(request, "main/regions/sinnoh.html", {"r": r})
 
-def unova(response, region):
+def unova(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/unova.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("unova")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/unova.html", {"r": r, "result": result, "p": p})
     
-    return render(response, "main/regions/unova.html", {"r": r})
+    return render(request, "main/regions/unova.html", {"r": r})
 
-def kalos(response, region):
+def kalos(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/kalos.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("kalos")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/kalos.html", {"r": r, "result": result, "p": p})
     
-    return render(response, "main/regions/kalos.html", {"r": r})
+    return render(request, "main/regions/kalos.html", {"r": r})
 
-def alola(response, region):
+def alola(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/alola.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("alola")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/alola.html", {"r": r, "result": result, "p": p})
     
-    return render(response, "main/regions/alola.html", {"r": r})
+    return render(request, "main/regions/alola.html", {"r": r})
 
-def galar(response, region):
+def galar(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/galar.html", {"r": r, "result": result})
-    
-    return render(response, "main/regions/galar.html", {"r": r})
+    if request.method == 'POST':
+        result = catch_pokemon("galar")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/galar.html", {"r": r, "result": result, "p": p})
 
-def paldea(response, region):
+    return render(request, "main/regions/galar.html", {"r": r})
+
+def paldea(request, region):
     r = Region.objects.get(name=region)
     
-    if response.method == 'POST':
-        result = catch_pokemon(region)
-        return render(response, "main/regions/paldea.html", {"r": r, "result": result})
+    if request.method == 'POST':
+        result = catch_pokemon("paldea")
+        if result[:5] == "shiny" :
+            p = Pokemon.objects.get(name=result[6:])
+        elif result: 
+            p = Pokemon.objects.get(name=result)
+        return render(request, "main/regions/paldea.html", {"r": r, "result": result, "p": p})
     
-    return render(response, "main/regions/paldea.html", {"r": r})
+    return render(request, "main/regions/paldea.html", {"r": r})
