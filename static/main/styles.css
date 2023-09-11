@@ -243,6 +243,7 @@ text-align: center;
 }
 
 .dex-container {
+  flex: 1;
   display: flex;
   justify-content: center;
   background-color: #fff;
@@ -254,7 +255,13 @@ text-align: center;
   border-bottom-right-radius: 20px; 
 }
 
+.pokemon-images {
+  flex: 1; /* Takes up one-third of the container */
+  padding: 10px; /* Adjust padding as needed */
+}
+
 .pokemon-list {
+  flex: 2;
   width: 65%;
   list-style: none;
   padding: 10%;
