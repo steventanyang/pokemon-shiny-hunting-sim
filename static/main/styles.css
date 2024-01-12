@@ -250,14 +250,13 @@ text-align: center;
   margin-right: 5%;
   margin-left: 5%;
   overflow-y: scroll;
-  max-height: 70%;
+  max-height: 65%;
   border-bottom-left-radius: 20px; 
   border-bottom-right-radius: 20px; 
 }
 
 .pokemon-images {
-  flex: 1; /* Takes up one-third of the container */
-  padding: 10px; /* Adjust padding as needed */
+  padding: 10px;
 }
 
 .pokemon-list {
